@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import { FloatingContact } from "@/components/floating-contact";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -244,6 +245,8 @@ export default function Contact() {
           </Card>
         </div>
       </div>
+      
+      <FloatingContact />
     </div>
   );
 }
