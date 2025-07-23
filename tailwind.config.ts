@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				serif: ['var(--font-serif)'],
+				sans: ['var(--font-sans)'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,7 +65,23 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom bookstore colors
+				'warm-cream': 'hsl(var(--warm-cream))',
+				'aged-paper': 'hsl(var(--aged-paper))',
+				'golden-amber': 'hsl(var(--golden-amber))',
+				'forest-green': 'hsl(var(--forest-green))',
+				'deep-brown': 'hsl(var(--deep-brown))'
+			},
+			backgroundImage: {
+				'gradient-warm': 'var(--gradient-warm)',
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-accent': 'var(--gradient-accent)',
+			},
+			boxShadow: {
+				'soft': 'var(--shadow-soft)',
+				'warm': 'var(--shadow-warm)',
+				'book': 'var(--shadow-book)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
