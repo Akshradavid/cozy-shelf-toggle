@@ -5,18 +5,12 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-import { Book } from "@/data/books";
 
-interface BookCardProps {
-  book: Book;
-  variant?: "default" | "featured";
-}
-
-export function BookCard({ book, variant = "default" }: BookCardProps) {
+export function BookCard({ book, variant = "default" }) {
   const [isWishlisted, setIsWishlisted] = useState(false);
   const { toast } = useToast();
 
-  const handleAddToCart = (e: React.MouseEvent) => {
+  const handleAddToCart = (e) => {
     e.preventDefault();
     toast({
       title: "Added to Cart",
@@ -24,7 +18,7 @@ export function BookCard({ book, variant = "default" }: BookCardProps) {
     });
   };
 
-  const handleWishlist = (e: React.MouseEvent) => {
+  const handleWishlist = (e) => {
     e.preventDefault();
     setIsWishlisted(!isWishlisted);
     toast({
@@ -33,7 +27,7 @@ export function BookCard({ book, variant = "default" }: BookCardProps) {
     });
   };
 
-  const renderStars = (rating: number) => {
+  const renderStars = (rating) => {
     const stars = [];
     const fullStars = Math.floor(rating);
     const hasHalfStar = rating % 1 !== 0;
